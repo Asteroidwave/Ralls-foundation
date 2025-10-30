@@ -44,8 +44,8 @@ export default function ApplyPage() {
 
   return (
     <div className="container py-16">
-      <h1 className="text-3xl font-bold mb-2">Apply for a Grant</h1>
-      <p className="text-zinc-700 dark:text-zinc-300 mb-8">
+      <h1 className="text-5xl lg:text-6xl font-extrabold tracking-tight mb-3">Apply for a Grant</h1>
+      <p className="text-lg text-zinc-700 mb-8">
         We support programs that deliver nutrition education to children and caregivers in underserved communities.
       </p>
 

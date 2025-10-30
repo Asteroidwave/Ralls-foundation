@@ -10,16 +10,16 @@ export default function Home() {
       {/* Hero: big image, text offset (inspiration: Green, Blank, Ford) */}
       <section className="relative overflow-hidden">
         <div className="container pt-24 pb-20 grid gap-12 lg:grid-cols-12 items-center">
-          <div className="lg:col-span-6 order-2 lg:order-1 space-y-6">
+          <div className="lg:col-span-6 order-2 lg:order-1 space-y-7">
             <motion.h1
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-900"
+              className="text-6xl lg:text-7xl font-extrabold tracking-tight text-zinc-900"
             >
               Nutrition education for every child
             </motion.h1>
-            <p className="text-xl text-zinc-700 max-w-prose">
+            <p className="text-2xl text-zinc-700 max-w-prose">
               We support programs that teach kids and caregivers how to eat well and build healthy habits in underserved communities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -55,8 +55,8 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:col-span-5 space-y-4">
-            <h2 className="text-3xl font-bold">Cooking basics in after‑school programs</h2>
-            <p className="text-zinc-700">
+            <h2 className="text-4xl font-bold">Cooking basics in after‑school programs</h2>
+            <p className="text-lg text-zinc-700">
               Hands-on lessons help kids build confidence in choosing and preparing vegetables, fruits, and whole foods.
             </p>
             <Link href="/stories" className="btn-primary w-fit">Read Stories</Link>
@@ -67,7 +67,7 @@ export default function Home() {
       {/* Focus areas: airy grid */}
       <section className="py-24">
         <div className="container">
-          <h2 className="text-3xl font-bold mb-8">Our Priorities</h2>
+          <h2 className="text-4xl font-bold mb-8">Our Priorities</h2>
           <div className="grid gap-8 md:grid-cols-3">
             {[{
               title: "Nutrition Education",

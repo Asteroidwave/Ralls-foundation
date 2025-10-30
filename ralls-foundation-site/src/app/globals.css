@@ -23,12 +23,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0b0f0a;      /* deep green-black */
-    --foreground: #e8f5e9;      /* pale green */
-  }
-}
+/* Force light theme for now */
 
 body {
   background: var(--background);
@@ -42,7 +37,7 @@ body {
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
-  max-width: 1200px;
+  max-width: 1280px;
 }
 
 .btn-primary {
