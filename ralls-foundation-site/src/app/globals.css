@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  /* Nutrition-forward light theme */
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --brand-green: #2e7d32;        /* leafy greens */
+  --brand-lime: #a3d65c;         /* fresh accent */
+  --brand-yellow: #ffd166;       /* sunny optimism */
+  --brand-sky: #5ec2f2;          /* clean sky */
+  --brand-berry: #b23a48;        /* contrasting accent */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand: var(--brand-green);
+  --color-brand-muted: var(--brand-lime);
+  --color-accent: var(--brand-yellow);
+  --color-sky: var(--brand-sky);
+  --color-berry: var(--brand-berry);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b0f0a;      /* deep green-black */
+    --foreground: #e8f5e9;      /* pale green */
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1200px;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors;
+  background-color: var(--brand-green);
+}
+.btn-primary:hover { background-color: #256428; }
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold shadow-sm transition-colors;
+  color: #1a1a1a;
+  background-color: var(--brand-yellow);
+}
+.btn-secondary:hover { filter: brightness(0.95); }
