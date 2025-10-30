@@ -6,12 +6,13 @@ export default function AboutPage() {
       <section className="relative">
         <div className="container pt-20 pb-12 grid gap-10 lg:grid-cols-12 items-center">
           <div className="lg:col-span-6 order-2 lg:order-1">
-            <h1 className="text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">About Us</h1>
+            <span className="inline-block h-2 w-24 rounded-full bg-[var(--brand-yellow)] mb-3" />
+            <h1 className="text-6xl lg:text-7xl font-extrabold tracking-tight mb-4">About Us</h1>
             <p className="text-xl text-zinc-700 max-w-prose">Advancing nutrition education for children in underserved communities.</p>
           </div>
           <div className="lg:col-span-6 order-1 lg:order-2">
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden">
-              <Image src="https://images.unsplash.com/photo-1604881991720-f91add269bed?q=80&w=1600&auto=format&fit=crop" alt="Kids learning about food" fill className="object-cover" />
+              <Image src="https://images.pexels.com/photos/105028/pexels-photo-105028.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Kids learning about food" fill className="object-cover" />
             </div>
           </div>
         </div>

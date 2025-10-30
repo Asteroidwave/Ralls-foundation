@@ -5,7 +5,8 @@ export default function ContactPage() {
     <div className="container py-16">
       <div className="grid gap-8 lg:grid-cols-12 items-start">
         <div className="lg:col-span-5 order-2 lg:order-1">
-          <h1 className="text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">Contact Us</h1>
+          <span className="inline-block h-2 w-24 rounded-full bg-[var(--brand-yellow)] mb-3" />
+          <h1 className="text-6xl lg:text-7xl font-extrabold tracking-tight mb-4">Contact Us</h1>
           <p className="text-lg text-zinc-700 mb-6">We’d love to hear from partners and community members.</p>
           <form className="space-y-4">
           <div>
@@ -29,7 +30,7 @@ export default function ContactPage() {
         </div>
         <div className="lg:col-span-7 order-1 lg:order-2">
           <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-            <Image src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=1600&auto=format&fit=crop" alt="Community garden" fill className="object-cover" />
+            <Image src="https://images.pexels.com/photos/1300972/pexels-photo-1300972.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Community garden" fill className="object-cover" />
           </div>
         </div>
       </div>

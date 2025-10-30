@@ -5,18 +5,19 @@ export default function StoriesPage() {
     {
       title: "Cooking Basics for 5th Graders",
       summary: "A school program teaching knife safety and simple veggie-forward recipes.",
-      img: "https://images.unsplash.com/photo-1498654200943-1088dd4438ae?q=80&w=1600&auto=format&fit=crop",
+      img: "https://images.pexels.com/photos/3184194/pexels-photo-3184194.jpeg?auto=compress&cs=tinysrgb&w=1600",
     },
     {
       title: "Clinic Pantry Produce Days",
       summary: "Pairing fresh produce distribution with kid-friendly nutrition lessons.",
-      img: "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1600&auto=format&fit=crop",
+      img: "https://images.pexels.com/photos/4199091/pexels-photo-4199091.jpeg?auto=compress&cs=tinysrgb&w=1600",
     },
   ];
   return (
     <div>
       <section className="container pt-20 pb-10">
-        <h1 className="text-5xl lg:text-6xl font-extrabold tracking-tight">Stories & Impact</h1>
+        <span className="inline-block h-2 w-24 rounded-full bg-[var(--brand-yellow)] mb-3" />
+        <h1 className="text-6xl lg:text-7xl font-extrabold tracking-tight">Stories & Impact</h1>
       </section>
       <section className="container pb-20 grid gap-8 sm:grid-cols-2">
         {stories.map((s) => (
