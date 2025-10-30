@@ -11,15 +11,16 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div className="container pt-24 pb-20 grid gap-12 lg:grid-cols-12 items-center">
           <div className="lg:col-span-6 order-2 lg:order-1 space-y-7">
+            <span className="inline-block h-2 w-24 rounded-full bg-[var(--brand-yellow)]" />
             <motion.h1
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="text-6xl lg:text-7xl font-extrabold tracking-tight text-zinc-900"
+              className="text-7xl lg:text-8xl font-extrabold tracking-tight text-zinc-900"
             >
               Nutrition education for every child
             </motion.h1>
-            <p className="text-2xl text-zinc-700 max-w-prose">
+            <p className="text-3xl text-zinc-700 max-w-prose">
               We support programs that teach kids and caregivers how to eat well and build healthy habits in underserved communities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -30,7 +31,7 @@ export default function Home() {
           <div className="lg:col-span-6 order-1 lg:order-2 relative">
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-sm">
               <Image
-                src="https://images.unsplash.com/photo-1555243896-c709bfa0b564?q=80&w=1600&auto=format&fit=crop"
+                src="https://images.pexels.com/photos/89236/pexels-photo-89236.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 alt="Children learning about fruits and vegetables"
                 fill
                 className="object-cover"
@@ -47,7 +48,7 @@ export default function Home() {
           <div className="lg:col-span-7 relative">
             <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1603201667141-7f0e6c56e6dd?q=80&w=1600&auto=format&fit=crop"
+                src="https://images.pexels.com/photos/3184192/pexels-photo-3184192.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 alt="Community class preparing healthy food"
                 fill
                 className="object-cover"
@@ -67,7 +68,7 @@ export default function Home() {
       {/* Focus areas: airy grid */}
       <section className="py-24">
         <div className="container">
-          <h2 className="text-4xl font-bold mb-8">Our Priorities</h2>
+          <h2 className="text-5xl font-bold mb-8">Our Priorities</h2>
           <div className="grid gap-8 md:grid-cols-3">
             {[{
               title: "Nutrition Education",
@@ -113,5 +114,3 @@ export default function Home() {
     </div>
   );
 }
-
-// It should work now. 
