@@ -10,9 +10,7 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/stories", label: "Stories" },
-  { href: "/press", label: "Press" },
   { href: "/contact", label: "Contact" },
-  { href: "/apply", label: "Apply" },
 ];
 
 export function NavBar() {
@@ -20,19 +18,21 @@ export function NavBar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/50 bg-white/80 dark:bg-black/50 border-b border-black/5 dark:border-white/10">
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-full" style={{ backgroundColor: "var(--brand-green)" }} />
-          <span className="text-base font-semibold tracking-tight">Ralls Family Foundation</span>
+    <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-[#eef3ea]/95 bg-[#eef3ea]/95 border-b border-black/10">
+      <div className="container flex h-20 items-center justify-between">
+        <Link href="/" className="flex items-center gap-3">
+          <div className="h-9 w-9 rounded-md grid place-items-center" style={{ backgroundColor: "var(--brand-green)", color: "white" }}>
+            <span className="text-[11px] font-bold leading-none">RFF</span>
+          </div>
+          <span className="text-lg font-semibold tracking-tight">Ralls Family Foundation</span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => {
             const active = pathname === item.href;
             return (
-              <Link key={item.href} href={item.href} className="relative text-sm font-medium">
-                <span className={`transition-colors ${active ? "text-[var(--brand-green)]" : "text-zinc-700 dark:text-zinc-300 hover:text-black dark:hover:text-white"}`}>
+              <Link key={item.href} href={item.href} className="relative text-lg font-medium">
+                <span className={`rounded-full px-3 py-2 transition-colors ${active ? "bg-[var(--brand-lime)]/50 text-black" : "text-zinc-700 hover:bg-[var(--brand-lime)]/40 hover:text-black"}`}>
                   {item.label}
                 </span>
                 {active && (
@@ -45,7 +45,7 @@ export function NavBar() {
               </Link>
             );
           })}
-          <Link href="/apply" className="btn-primary">Apply for a Grant</Link>
+          <Link href="/apply" className="btn-primary text-base">Apply for a Grant</Link>
         </nav>
 
         <button className="md:hidden p-2" onClick={() => setOpen((v) => !v)} aria-label="Toggle Menu">

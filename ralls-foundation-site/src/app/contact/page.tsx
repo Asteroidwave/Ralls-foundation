@@ -1,10 +1,12 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function ContactPage() {
   return (
     <div className="container py-16">
       <div className="grid gap-8 lg:grid-cols-12 items-start">
-        <div className="lg:col-span-5 order-2 lg:order-1">
+        <motion.div className="lg:col-span-5 order-2 lg:order-1" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.35 }} transition={{ duration: 1.0, ease: "easeOut" }}>
           <span className="inline-block h-2 w-24 rounded-full bg-[var(--brand-yellow)] mb-3" />
           <h1 className="text-6xl lg:text-7xl font-extrabold tracking-tight mb-4">Contact Us</h1>
           <p className="text-lg text-zinc-700 mb-6">We’d love to hear from partners and community members.</p>
@@ -27,12 +29,12 @@ export default function ContactPage() {
             <p>Email: info@rallsfoundation.org</p>
             <p>We currently accept grant applications online.</p>
           </div>
-        </div>
-        <div className="lg:col-span-7 order-1 lg:order-2">
+        </motion.div>
+        <motion.div className="lg:col-span-7 order-1 lg:order-2" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.35 }} transition={{ duration: 1.0, ease: "easeOut" }}>
           <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
             <Image src="https://images.pexels.com/photos/1300972/pexels-photo-1300972.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Community garden" fill className="object-cover" />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

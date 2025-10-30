@@ -9,18 +9,18 @@ export default function Home() {
     <div>
       {/* Hero: big image, text offset (inspiration: Green, Blank, Ford) */}
       <section className="relative overflow-hidden">
-        <div className="container pt-24 pb-20 grid gap-12 lg:grid-cols-12 items-center">
-          <div className="lg:col-span-6 order-2 lg:order-1 space-y-7">
-            <span className="inline-block h-2 w-24 rounded-full bg-[var(--brand-yellow)]" />
-            <motion.h1
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className="text-7xl lg:text-8xl font-extrabold tracking-tight text-zinc-900"
-            >
+        <div className="h-1 w-full bg-[var(--brand-yellow)]" />
+        <div className="container py-6">
+          <div className="relative w-full rounded-2xl overflow-hidden mx-auto aspect-[16/9] max-h-[80vh]">
+            <Image src="/family.jpg" alt="Ralls family" fill className="object-cover object-center" priority />
+          </div>
+        </div>
+        <div className="container pb-10">
+          <div className="max-w-5xl space-y-6">
+            <motion.h1 initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="text-7xl lg:text-8xl font-extrabold tracking-tight text-zinc-900">
               Nutrition education for every child
             </motion.h1>
-            <p className="text-3xl text-zinc-700 max-w-prose">
+            <p className="text-3xl text-zinc-800">
               We support programs that teach kids and caregivers how to eat well and build healthy habits in underserved communities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -28,32 +28,23 @@ export default function Home() {
               <Link href="/about" className="btn-secondary">About the Foundation</Link>
             </div>
           </div>
-          <div className="lg:col-span-6 order-1 lg:order-2 relative">
-            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-sm">
-              <Image
-                src="https://images.pexels.com/photos/89236/pexels-photo-89236.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Children learning about fruits and vegetables"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Featured story with big image */}
       <section className="py-24 bg-white">
+        <div className="h-1 w-full bg-[var(--brand-yellow)] mb-12" />
         <div className="container grid gap-10 lg:grid-cols-12 items-center">
           <div className="lg:col-span-7 relative">
-            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
-              <Image
-                src="https://images.pexels.com/photos/3184192/pexels-photo-3184192.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Community class preparing healthy food"
-                fill
-                className="object-cover"
-              />
-            </div>
+            <motion.div
+              initial={{ opacity: 0, x: -60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.35 }}
+              transition={{ duration: 1.05, ease: "easeOut" }}
+              className="relative aspect-[16/9] rounded-2xl overflow-hidden"
+            >
+              <Image src="/gen-viv.jpg" alt="Community class preparing healthy food" fill className="object-cover" />
+            </motion.div>
           </div>
           <div className="lg:col-span-5 space-y-4">
             <h2 className="text-4xl font-bold">Cooking basics in after‑school programs</h2>
@@ -67,6 +58,7 @@ export default function Home() {
 
       {/* Focus areas: airy grid */}
       <section className="py-24">
+        <div className="h-1 w-full bg-[var(--brand-yellow)] mb-12" />
         <div className="container">
           <h2 className="text-5xl font-bold mb-8">Our Priorities</h2>
           <div className="grid gap-8 md:grid-cols-3">
@@ -99,17 +91,19 @@ export default function Home() {
 
       {/* Wide CTA with space */}
       <section className="py-28 bg-[var(--brand-lime)]/30">
+        <div className="h-1 w-full bg-[var(--brand-yellow)] mb-12" />
         <div className="container">
-          <div className="rounded-3xl p-10 md:p-14 bg-white border border-black/5 grid gap-6 md:grid-cols-3 items-center">
+          <div className="rounded-3xl p-12 md:p-16 bg-white border border-black/5 grid gap-8 md:grid-cols-3 items-center">
             <div className="md:col-span-2">
-              <h3 className="text-3xl font-bold mb-2 text-zinc-900">Have a program impacting kids' nutrition?</h3>
-              <p className="text-zinc-700">We fund capable, courageous leaders making measurable impact.</p>
+              <h3 className="text-4xl lg:text-5xl font-extrabold mb-3 text-zinc-900">Have a program impacting kids' nutrition?</h3>
+              <p className="text-xl text-zinc-700">We fund capable, courageous leaders making measurable impact.</p>
             </div>
             <div className="flex md:justify-end">
-              <Link href="/apply" className="btn-primary">Start Application</Link>
+              <Link href="/apply" className="btn-primary text-lg px-8 py-4">Start Application</Link>
             </div>
           </div>
         </div>
+        <div className="h-1 w-full bg-[var(--brand-yellow)] mt-12" />
       </section>
     </div>
   );

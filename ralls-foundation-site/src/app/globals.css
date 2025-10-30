@@ -19,8 +19,8 @@
   --color-accent: var(--brand-yellow);
   --color-sky: var(--brand-sky);
   --color-berry: var(--brand-berry);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
 }
 
 /* Force light theme for now */
@@ -28,7 +28,11 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+h1, h2, h3, .heading {
+  font-family: var(--font-heading), var(--font-sans);
 }
 
 .container {
